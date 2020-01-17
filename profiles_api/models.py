@@ -14,8 +14,8 @@ class UserProfileManager(BaseUserManager):
             raise ValueError('User must have an email address')
 
         #normalizing email address
-        email=self.normalize_email(email)
-        user.self.model(email=email,name=name)
+        email = self.normalize_email(email)
+        user = self.model(email=email,name=name)
 
         user.set_password(password) #for password encryption
         user.save(using=self._db)
@@ -26,7 +26,7 @@ class UserProfileManager(BaseUserManager):
         '''to create and save a new super user with given details for the system'''
         user = self.create_user(email, name, password)
 
-        useer.is_superuser = True
+        user.is_superuser = True
         user.is_staff = True
         user.save(using=self._db)
 
