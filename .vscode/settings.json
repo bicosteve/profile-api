@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/home/bico/.local/share/virtualenvs/Api-xoJu8Xx5/bin/python"
+    "python.pythonPath": "/usr/bin/python3.7",
+    "python.linting.enabled": false
 }
